@@ -2,7 +2,7 @@ const {Telegraf} = require('telegraf')
 var express = require('express');
 var app = express();
 app.use(express.json())
-app.get('/', function (req, res) {
+app.get('/home', function (req, res) {
     res.send('Hello World');
 })
 
