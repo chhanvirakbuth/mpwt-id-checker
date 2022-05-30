@@ -84,7 +84,7 @@ bot.command('id', (ctx) => {
 
 bot.launch()
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 9002;
 app.listen(port, function () {
   console.log("app is running on port "+port);
 })
