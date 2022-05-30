@@ -2,8 +2,14 @@ const {Telegraf} = require('telegraf')
 var express = require('express');
 var app = express();
 app.use(express.json())
+
+app.get('/', function (req, res) {
+    res.send('Hello');
+})
+
+
 app.get('/home', function (req, res) {
-    res.send('Hello World');
+    res.send('home');
 })
 
 const bot = new Telegraf("5365433251:AAEoJwgYIG9QJd29rdiSJ9pShVlfe84seiI")
@@ -84,7 +90,7 @@ bot.command('id', (ctx) => {
 
 bot.launch()
 
-const port = process.env.PORT || 9002;
+const port = process.env.PORT || 9001;
 app.listen(port, function () {
   console.log("app is running on port "+port);
 })
